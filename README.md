@@ -2,6 +2,8 @@
 
 [tmux-git-status](https://github.com/kechol/tmux-git-status) is a tmux plugin that enables displaying git status on your tmux status line.
 
+![tmux_git_status](https://github.com/kechol/tmux-git-status/raw/master/screenshots/tmux_git_status.png)
+
 
 ## Installation
 
