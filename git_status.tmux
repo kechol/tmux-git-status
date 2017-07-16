@@ -7,11 +7,13 @@ source "$CURRENT_DIR/scripts/helpers.sh"
 git_status_interpolations=(
 	"\#{git_branch}"
 	"\#{git_status}"
+	"\#{git_upstream}"
 )
 
 git_status_commands=(
 	"#($CURRENT_DIR/scripts/git_branch.sh)"
 	"#($CURRENT_DIR/scripts/git_status.sh)"
+	"#($CURRENT_DIR/scripts/git_upstream.sh)"
 )
 
 do_interpolation() {
