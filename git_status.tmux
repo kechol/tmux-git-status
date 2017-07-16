@@ -5,11 +5,11 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source "$CURRENT_DIR/scripts/helpers.sh"
 
 git_status_interpolations=(
-	"\#{git_position}"
+	"\#{git_branch}"
 )
 
 git_status_commands=(
-	"#($CURRENT_DIR/scripts/git_position.sh)"
+	"#($CURRENT_DIR/scripts/git_branch.sh)"
 )
 
 do_interpolation() {
