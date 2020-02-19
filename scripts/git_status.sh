@@ -34,27 +34,27 @@ get_status_count() {
 	while IFS='' read line; do
 		status=${line:0:2}
 		if [[ "$status" =~ \?\? ]]; then
-			((git_status_untracked_count++))
+			((++git_status_untracked_count))
 		fi
 		if [[ "$status" =~ ?U|U?|AA|DD ]]; then
-			((git_status_unmerged_count++))
+			((++git_status_unmerged_count))
 		fi
 		if [[ "$status" =~ C[\ MTD] ]]; then
-			((git_status_copied_count++))
+			((++git_status_copied_count))
 		fi
 		if [[ "$status" =~ R[\ MTD] ]]; then
-			((git_status_renamed_count++))
+			((++git_status_renamed_count))
 		fi
 		if [[ "$status" =~ A[\ MTD] ]]; then
-			((git_status_added_count++))
+			((++git_status_added_count))
 		fi
 		if [[ "$status" =~ (M|T)[\ MTD]|[\ MTARC](M|T) ]]; then
-			((git_status_modified_count++))
+			((++git_status_modified_count))
 		fi
 		if [[ "$status" =~ D[\ MT]|[\ MTARC]D ]]; then
-			((git_status_deleted_count++))
+			((++git_status_deleted_count))
 		fi
-		((git_status_dirty_count++))
+		((++git_status_dirty_count))
 	done <<< "$git_status"
 }
 
